@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule (.*) publicgit
+RewriteRule (.*) public
