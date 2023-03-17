@@ -13,50 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', 'HomeController@index');
 
-// Route::get('/', function() 
-// {
-//     return '<h1>Hello, world!</h1>';
-// });
+Route::fallback(function () 
+    {
+        // return redirect()->route('home');
+        abort(404, 'Ooops, page not found...');
+    });
 
-Route::get('/', function() 
-{
-    $res = 2 + 5 - 2;
-    $name = 'John';
-    return view('home', compact('res', 'name'));
-    // return view('home', ['var' => $res, 'name' => $name]);
-});
 
-Route::get('/about', function() 
-{
-   return '<h1>About Page.</h1>';
-});
-
-// Route::get('/contact', function() 
-// {
-//     return view('contact');
-// });
-
-// Route::post('/send-email', function() 
-// {
-//     if(!empty($_POST)) {
-//         dump($_POST);
-//     }
-//     return 'Send Email';
-// });
-
-Route::match(['post', 'get'], '/contact', function() 
-{
-    if(!empty($_POST)) {
-        dump($_POST);
-    }
-    return view('contact');
-});
-
-Route::view('/test', 'test', ['test' => 'testData'] );
-
-// Route::redirect('/about', '/public/contact', 301);
-Route::permanentRedirect('/about', '/public/contact');
