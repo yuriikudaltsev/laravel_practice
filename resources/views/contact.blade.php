@@ -9,6 +9,7 @@
 <body>
     
     <form action="" method="post">
+        @method('PUT')
         @csrf
         <input type="text" name="name">
         <input type="email" name="email">
