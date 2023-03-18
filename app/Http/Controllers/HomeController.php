@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Controller;
 namespace App\Http\Controllers;
 
 class HomeController extends Controller
@@ -8,9 +7,14 @@ class HomeController extends Controller
 
     public function index() 
     {
-        return 'Hello from index!';
+        return view('home', ['res' => 54, 'name'=> 'MMM']);
     }
 
+    public function test() 
+    {
+      return __METHOD__;   
+    }
+    
 }
 
 ?>

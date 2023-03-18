@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Hello, world!</h1>
+    
+    @method('POST')
 
     {{ $res; }} <br>
     {{ $name; }}<br>
 
-    {{ route('post', ['id' => 4, 'slug' => 'test2']) }}<br>
-    {{ route('admin.post', ['id' => 43]) }}
 </body>
 </html>
