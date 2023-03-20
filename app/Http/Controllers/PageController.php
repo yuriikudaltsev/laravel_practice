@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PageController extends Controller
 {
     
-    public function show () 
+    public function show($slug) 
     {
-        return view('about');
+        return view("pages/show", ['slug' => $slug]);
     }
     
 }

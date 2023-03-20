@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>{{ $slug }} pages</title>
+    <title>{{ $slug }} page</title>
 </head>
 <body>
-    <h1>{{ $slug }} pages</h1>
+    <h1>{{ $slug }} page.</h1>
 </body>
 </html>
