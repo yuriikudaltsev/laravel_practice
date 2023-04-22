@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 class HomeController extends Controller
 {
 
     public function index() 
     {
-        dump($_ENV['DB_DATABASE']);
-        dump($_ENV);
-        dump(config('broadcasting.connections.ably.driver'));
+        DB::select("SELECT * FROM posts");
+        
+//        dump($_ENV['DB_DATABASE']);
+//        dump($_ENV);
+//        dump(config('broadcasting.connections.ably.driver'));
         return view('home', ['res' => 54, 'name'=> 'MMM']);
     }
 

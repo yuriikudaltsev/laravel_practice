@@ -13,6 +13,7 @@
 
     {{ $res; }} <br>
     {{ $name; }}<br>
+   
 
 </body>
 </html>
